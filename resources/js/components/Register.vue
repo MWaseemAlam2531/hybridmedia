@@ -66,7 +66,7 @@ const handleRegister = async () => {
     // Auto-login after registration
     await authStore.login({ email: email.value, password: password.value })
 
-    router.push('/')
+    router.push('/dashboard')
   } catch (err) {
     console.error(err)
     alert(err.response?.data?.message || 'Registration failed')
